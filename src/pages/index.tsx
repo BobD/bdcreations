@@ -1,12 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { SEO } from "../components/seo"
-import Layout from "../components/layout"
+import { Seo, Layout } from "../components"
 
 const Home = () => (
   <Layout>
-    <SEO title="Home" />
+    <Seo title="Home" />
     <StaticImage src="../images/gatsby-astronaut.png" alt="A dinosaur" />
     <Link to="/business">BD Creations</Link>
     <Link to="/personal">Bob Donderwinkel</Link>

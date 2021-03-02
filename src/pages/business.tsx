@@ -1,11 +1,10 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import { SEO } from "../../components/seo"
-import Layout from "../../components/layout"
+import { Seo, Layout } from "../components"
 
 const Business = () => (
   <Layout>
-    <SEO title="BD Creations" />
+    <Seo title="BD Creations" />
     <StaticImage src="../images/gatsby-astronaut.png" alt="A dinosaur" />
     Business
   </Layout>
