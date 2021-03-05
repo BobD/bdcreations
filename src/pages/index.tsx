@@ -7,8 +7,6 @@ const Home = () => (
   <Layout>
     <Seo title="Home" />
     <StaticImage src="../images/gatsby-astronaut.png" alt="A dinosaur" />
-    <Link to="/business">BD Creations</Link>
-    <Link to="/personal">Bob Donderwinkel</Link>
   </Layout>
 )
 

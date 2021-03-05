@@ -1,9 +1,26 @@
 import React from "react"
+import { Wrapper, Title, Pages, Link } from "./Menu.styles"
 
-interface Menu {}
+interface Menu {
+  title: string
+  page: string
+  subPages: {
+    title: string
+    page: string
+  }[]
+}
 
-const Menu = (props: Menu) => {
-  return <p>Menu</p>
+const Menu = ({ title, page, subPages }: Menu) => {
+  return (
+    <Wrapper>
+      <Title to={page}>{title}</Title>
+      <Pages>
+        {subPages.map(({ title, page }) => (
+          <Link to={page}>{title}</Link>
+        ))}
+      </Pages>
+    </Wrapper>
+  )
 }
 
 export { Menu }
