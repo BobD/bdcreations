@@ -6,17 +6,17 @@ const Header = () => (
   <Wrapper>
     <Menu
       title="BD Creations"
-      page="/business"
+      page="business"
       subPages={[
-        { title: "About", page: "/about" },
-        { title: "Projects", page: "/projects" },
-        { title: "Contact", page: "/contact" },
+        { title: "About", page: "about" },
+        { title: "Projects", page: "projects" },
+        { title: "Contact", page: "contact" },
       ]}
     />
     <Menu
       title="Bob Donderwinkel"
-      page="/personal"
-      subPages={[{ title: "Profile", page: "/profile" }]}
+      page="personal"
+      subPages={[{ title: "Profile", page: "profile" }]}
     />
   </Wrapper>
 )

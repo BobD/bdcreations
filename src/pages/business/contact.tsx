@@ -1,10 +1,10 @@
 import React from "react"
-import { Seo, Layout } from "../components"
+import { Seo, Layout } from "../../components"
 
 const Business = () => (
   <Layout>
-    <Seo title="Projects" />
-    Projects
+    <Seo title="Contact" />
+    Contact
   </Layout>
 )
 

@@ -13,10 +13,10 @@ interface Menu {
 const Menu = ({ title, page, subPages }: Menu) => {
   return (
     <Wrapper>
-      <Title to={page}>{title}</Title>
+      <Title to={`/${page}`}>{title}</Title>
       <Pages>
-        {subPages.map(({ title, page }) => (
-          <Link to={page}>{title}</Link>
+        {subPages.map(({ title, page: subPage }) => (
+          <Link to={`/${page}/${subPage}`}>{title}</Link>
         ))}
       </Pages>
     </Wrapper>
