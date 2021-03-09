@@ -1,10 +1,7 @@
 import styled from "styled-components"
 import { gap } from "../../Layout.styles"
 
-export const Wrapper = styled.header`
+export const Wrapper = styled.div`
   display: flex;
-  gap: 2rem;
   padding: ${gap};
-  position: sticky;
-  top: 0;
 `

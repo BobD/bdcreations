@@ -16,7 +16,9 @@ const Menu = ({ title, page, subPages }: Menu) => {
       <Title to={`/${page}`}>{title}</Title>
       <Pages>
         {subPages.map(({ title, page: subPage }) => (
-          <Link to={`/${page}/${subPage}`}>{title}</Link>
+          <Link key={subPage} to={`/${page}/${subPage}`}>
+            {title}
+          </Link>
         ))}
       </Pages>
     </Wrapper>

@@ -1,7 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Seo, Layout } from "../components"
+import "./normalize.css"
+import "./global.css"
 
 const Home = () => (
   <Layout>

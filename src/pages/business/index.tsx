@@ -5,8 +5,6 @@ import { Seo, Layout } from "../../components"
 const Business = () => (
   <Layout>
     <Seo title="BD Creations" />
-    <StaticImage src="../images/gatsby-astronaut.png" alt="A dinosaur" />
-    Business
   </Layout>
 )
 

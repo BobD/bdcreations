@@ -5,8 +5,6 @@ import { Seo, Layout } from "../../components"
 const Personal = () => (
   <Layout>
     <Seo title="Bob Donderwinkel" />
-    <StaticImage src="../images/gatsby-astronaut.png" alt="A dinosaur" />
-    Personal
   </Layout>
 )
 

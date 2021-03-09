@@ -7,14 +7,25 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 0.5rem;
 `
 
-const LinkWrapper = styled(Link).attrs({ activeClassName })`
+const LinkWrapper = styled(Link).attrs({
+  activeClassName,
+  partiallyActive: true,
+})`
   text-decoration: none;
   color: inherit;
+  line-height: 1.5;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s linear;
 
+  &:hover,
   &.${activeClassName} {
-    border-bottom: thin solid black;
+    background-size: 100% 1px;
   }
 `
 
