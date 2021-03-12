@@ -26,7 +26,7 @@ const LinkWrapper = styled(Link).attrs({
 `
 
 export const Title = styled(LinkWrapper)`
-  font-weight: 600;
+  font-weight: var(--textBold);
   text-transform: uppercase;
 `
 

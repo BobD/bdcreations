@@ -9,7 +9,6 @@ import "../css/colors.css"
 const Home = () => (
   <Layout>
     <Seo title="Home" />
-    <StaticImage src="../images/gatsby-astronaut.png" alt="A dinosaur" />
   </Layout>
 )
 

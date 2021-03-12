@@ -3,6 +3,7 @@ import { gap } from "../../Layout.styles"
 
 export const Wrapper = styled.header`
   display: flex;
+  align-items: flex-end;
   gap: 2rem;
   padding: ${gap};
   position: sticky;
@@ -11,4 +12,5 @@ export const Wrapper = styled.header`
 
 export const Divider = styled.div`
   border-right: thin solid var(--textFaded);
+  align-self: stretch;
 `
