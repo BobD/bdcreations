@@ -1,5 +1,5 @@
 import React from "react"
-import { Wrapper, Title, Pages, Link } from "./Menu.styles"
+import { Wrapper, Title, Pages, Page } from "./Menu.styles"
 
 interface Menu {
   title: string
@@ -16,9 +16,9 @@ const Menu = ({ title, page, subPages }: Menu) => {
       <Title to={`/${page}`}>{title}</Title>
       <Pages>
         {subPages.map(({ title, page: subPage }) => (
-          <Link key={subPage} to={`/${page}/${subPage}`}>
+          <Page key={subPage} to={`/${page}/${subPage}`}>
             {title}
-          </Link>
+          </Page>
         ))}
       </Pages>
     </Wrapper>

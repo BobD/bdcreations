@@ -1,5 +1,5 @@
 import React from "react"
-import { Wrapper } from "./Header.styles"
+import { Wrapper, Divider } from "./Header.styles"
 import { Menu } from "./components"
 
 const Header = () => (
@@ -13,6 +13,7 @@ const Header = () => (
         { title: "Contact", page: "contact" },
       ]}
     />
+    <Divider />
     <Menu
       title="Bob Donderwinkel"
       page="personal"

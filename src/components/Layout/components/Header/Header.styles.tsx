@@ -8,3 +8,7 @@ export const Wrapper = styled.header`
   position: sticky;
   top: 0;
 `
+
+export const Divider = styled.div`
+  border-right: thin solid var(--textFaded);
+`
