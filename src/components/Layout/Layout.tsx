@@ -3,13 +3,14 @@ import { Wrapper, Content } from "./Layout.styles"
 import { Header, Footer } from "./components"
 
 interface Layout {
+  currentPath: Header["currentPath"]
   children: React.ReactNode
 }
 
-const Layout = ({ children }: Layout) => {
+const Layout = ({ currentPath, children }: Layout) => {
   return (
     <Wrapper>
-      <Header />
+      <Header currentPath={currentPath} />
       <Content>{children}</Content>
       <Footer />
     </Wrapper>
