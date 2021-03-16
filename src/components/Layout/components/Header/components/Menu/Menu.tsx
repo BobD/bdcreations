@@ -2,27 +2,32 @@ import React from "react"
 import { PageProps } from "gatsby"
 import { Wrapper, Title, Pages, Page } from "./Menu.styles"
 
+type Page = {
+  title: string
+  page: string
+}
+
 interface Menu {
   isActive: boolean
   title: string
-  page: string
-  subPages: {
-    title: string
-    page: string
-  }[]
+  pages: [Page, ...Page[]]
 }
 
-const Menu = ({ title, page, subPages, isActive }: Menu) => (
-  <Wrapper>
-    <Title to={`/${page}`}>{title}</Title>
-    <Pages active={isActive}>
-      {subPages.map(({ title, page: subPage }) => (
-        <Page key={subPage} to={`/${page}/${subPage}`}>
-          {title}
-        </Page>
-      ))}
-    </Pages>
-  </Wrapper>
-)
+const Menu = ({ title, pages, isActive }: Menu) => {
+  const firstPage = pages[0].page
+
+  return (
+    <Wrapper>
+      <Title to={`/${firstPage}`}>{title}</Title>
+      <Pages active={isActive}>
+        {pages.map(({ title, page }) => (
+          <Page key={page} to={`/${page}`}>
+            {title}
+          </Page>
+        ))}
+      </Pages>
+    </Wrapper>
+  )
+}
 
 export { Menu }

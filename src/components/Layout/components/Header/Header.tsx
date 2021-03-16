@@ -4,27 +4,25 @@ import { Wrapper, Divider } from "./Header.styles"
 import { Menu } from "./components"
 
 interface Header {
-  currentPath: PageProps["location"]["pathname"]
+  currentPath?: PageProps["location"]["pathname"]
 }
 
 const Header = ({ currentPath }: Header) => (
   <Wrapper>
     <Menu
       title="BD Creations"
-      page="business"
-      isActive={currentPath.startsWith("/business")}
-      subPages={[
-        { title: "About", page: "about" },
-        { title: "Projects", page: "projects" },
-        { title: "Contact", page: "contact" },
+      isActive={currentPath ? currentPath.startsWith("/business") : false}
+      pages={[
+        { title: "About", page: "business/about" },
+        { title: "Projects", page: "business/projects" },
+        { title: "Contact", page: "business/contact" },
       ]}
     />
     <Divider />
     <Menu
       title="Bob Donderwinkel"
-      page="personal"
-      isActive={currentPath.startsWith("/personal")}
-      subPages={[{ title: "Profile", page: "profile" }]}
+      isActive={currentPath ? currentPath.startsWith("/personal") : false}
+      pages={[{ title: "Profile", page: "personal/profile" }]}
     />
   </Wrapper>
 )

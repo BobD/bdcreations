@@ -3,7 +3,7 @@ import { Wrapper, Content } from "./Layout.styles"
 import { Header, Footer } from "./components"
 
 interface Layout {
-  currentPath: Header["currentPath"]
+  currentPath?: Header["currentPath"]
   children: React.ReactNode
 }
 
