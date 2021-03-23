@@ -1,12 +1,26 @@
 import React from "react"
-import { PageProps } from "gatsby"
+import { graphql, useStaticQuery, PageProps } from "gatsby"
+import { ContactQuery } from "../../../graphql-types"
+import { getPageContent } from "../../shared"
 import { Seo, Layout, Page } from "../../components"
 
-const Business = ({ location }: PageProps) => (
-  <Layout currentPath={location.pathname}>
-    <Seo title="Contact" />
-    <Page title="Contact" articles={[]} />
-  </Layout>
-)
+const pageQuery = graphql`
+  query Contact($slug: String! = "/business/contact") {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      ...PageContent
+    }
+  }
+`
 
+const Business = ({ location }: PageProps) => {
+  const data: ContactQuery = useStaticQuery(pageQuery)
+  const { title, content } = getPageContent(data)
+
+  return (
+    <Layout currentPath={location.pathname}>
+      <Seo title={title} />
+      <Page title={title} content={content} />
+    </Layout>
+  )
+}
 export default Business

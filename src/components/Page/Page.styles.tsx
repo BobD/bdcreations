@@ -2,12 +2,9 @@ import styled from "styled-components"
 
 export const Wrapper = styled.main`
   display: flex;
+  flex-direction: column;
 `
 
-export const Articles = styled.div`
-  display: flex;
-`
-
-export const Article = styled.article`
+export const Content = styled.div`
   display: flex;
 `

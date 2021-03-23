@@ -1,24 +1,15 @@
 import React from "react"
-import { Wrapper, Articles, Article } from "./Page.styles"
-
-interface Article {
-  title: string
-  body: string
-}
+import { Wrapper, Content } from "./Page.styles"
 
 interface Page {
   title: string
-  articles: Article[]
+  content: string
 }
 
-const Page = ({ title, articles }: Page) => (
+const Page = ({ title, content }: Page) => (
   <Wrapper>
     <h1>{title}</h1>
-    <Articles>
-      {articles.map(({ title, body }) => (
-        <Article>{title}</Article>
-      ))}
-    </Articles>
+    <Content dangerouslySetInnerHTML={{ __html: content }} />
   </Wrapper>
 )
 
